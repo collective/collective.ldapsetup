@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<object name="pasldap" meta_type="LDAP Plugin" type="dict">
+ <element key="cache.cache" type="bool">True</element>
+ <element key="cache.timeout" type="int">300</element>
+ <element key="groups.attrmap" type="dict">
+  <element key="cn" type="string">cn</element>
+  <element key="description" type="string">description</element>
+  <element key="id" type="string">cn</element>
+  <element key="member" type="string">member</element>
+  <element key="rdn" type="string">cn</element>
+  <element key="title" type="string">name</element>
+ </element>
+ <element key="groups.baseDN" type="string">ou=Groups,dc=example,dc=org</element>
+ <element key="groups.memberOfSupport" type="bool">False</element>
+ <element key="groups.objectClasses" type="list">
+  <element type="string">group</element>
+ </element>
+ <element key="groups.queryFilter" type="string">(objectClass=group)</element>
+ <element key="groups.scope" type="int">1</element>
+ <element key="server.ignore_cert" type="bool">True</element>
+ <element key="server.page_size" type="int">1000</element>
+ <element key="server.password" type="string">SECRET</element>
+ <element key="server.uri" type="string">ldaps://ad-alias1.example.org:636</element>
+ <element key="server.user"
+    type="string">CN=service_ zope,OU=Blocked policies,OU=Services,OU=User Accounts,DC=example,DC=org</element>
+ <element key="users.account_expiration" type="bool">False</element>
+ <element key="users.attrmap" type="dict">
+  <element key="email" type="string">mail</element>
+  <element key="fullname" type="string">displayName</element>
+  <element key="id" type="string">sAMAccountName</element>
+  <element key="login" type="string">sAMAccountName</element>
+  <element key="rdn" type="string">cn</element>
+  <element key="sAMAccountName" type="string">sAMAccountName</element>
+  <element key="uid" type="string">uid</element>
+ </element>
+ <element key="users.baseDN"
+    type="string">ou=User Accounts,dc=example,dc=org</element>
+ <element key="users.expires_attr" type="string"></element>
+ <element key="users.expires_unit" type="int">0</element>
+ <element key="users.memberOfSupport" type="bool">False</element>
+ <element key="users.objectClasses" type="list">
+  <element type="string">top,person</element>
+ </element>
+ <element key="users.queryFilter" type="string">(objectClass=person)</element>
+ <element key="users.scope" type="int">2</element>
+</object>

@@ -1,0 +1,42 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="collective.ldapsetup">
+
+  <include package="pas.plugins.ldap" />
+  <five:registerPackage package="." initialize=".initialize" />
+
+  <genericsetup:registerProfile
+      name="default"
+      title="collective.ldapsetup"
+      directory="profiles/default"
+      description="Configures the LDAP setup for Collective"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <genericsetup:upgradeSteps
+    source="1000"
+    destination="1001"
+    profile="collective.ldapsetup:default">
+    <genericsetup:upgradeDepends
+      title="Update componentregistry"
+      import_steps="componentregistry"
+    />
+    <!-- untested upgrade steps -->
+    <!-- <genericsetup:upgradeDepends
+      title="Update registry"
+      import_steps="plone.app.registry"
+    />
+    <genericsetup:upgradeDepends
+      title="Update LDAP settings"
+      import_steps="pas.plugins.ldap.settings"
+    />
+    <genericsetup:upgradeDepends
+      title="Reapply pas.plugins.ldap.plonecontrolpanel profile"
+      import_profile="pas.plugins.ldap.plonecontrolpanel:default"
+    /> -->
+  </genericsetup:upgradeSteps>
+
+</configure>

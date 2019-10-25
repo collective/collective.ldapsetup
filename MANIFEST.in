@@ -1,0 +1,6 @@
+include *.rst
+include *.txt
+include buildout.cfg
+graft collective
+graft docs
+global-exclude *.pyc
