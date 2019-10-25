@@ -45,4 +45,4 @@ Instead, you can now use an environment setting for that.
 Sponsorship
 -----------
 
-Work on this package has been made possible by The Flanders Environment Agency or VMM. See https://www.vmm.be/ . VMM operates as an agency of the Flanders government for a better environment in Flanders. Flanders is one of the three Belgian regions with its own government, parliament and administration. The other two are the Brussels-Capital Region and the Walloon Region.
+Work on this integration package has been made possible by The Flanders Environment Agency or VMM. See https://www.vmm.be/ . VMM operates as an agency of the Flanders government for a better environment in Flanders. Flanders is one of the three Belgian regions with its own government, parliament and administration. The other two are the Brussels-Capital Region and the Walloon Region.
